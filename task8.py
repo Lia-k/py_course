@@ -22,6 +22,9 @@ marta = {'full_name': marta_name, 'age': marta_age, 'salary': marta_salary, 'gen
 for key, value in john.items():
     print(f'{key} => {value}')
 
+for key, value in marta.items():
+    print(f'{key} => {value}')
+
 #
 # Задача со звездочкой:
 # Задача с пункта 8. Вместо строк в списке друзей должны быть такие же словари как джон и марта. Создайте по 2 друга для джона и марты.
