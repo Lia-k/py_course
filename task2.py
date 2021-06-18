@@ -3,6 +3,7 @@
 john_age = 25
 marta_age = 23
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(john_age)
     print(marta_age)
+# Good but no new line in the end od file

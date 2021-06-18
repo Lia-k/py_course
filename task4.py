@@ -3,6 +3,6 @@
 john_gender = True
 marta_gender = False
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(john_gender)
     print(marta_gender)
