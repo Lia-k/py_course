@@ -8,8 +8,8 @@ poker_blacklist = {"Daniel Negreanu", "Phil Ivey", "Phil Hellmuth",
                    "Patrik Antonius", "Russell Crowe", "Catherine Zeta-Jones",
                    "Kate Moss"}
 mahjong_blacklist = {"Mai Hatsune", "Prince William", "Russell Crowe",
-                    "Catherine Zeta-Jones", "Phil Ivey", "Phil Hellmuth",
-                    "Zhou Yong"}
+                     "Catherine Zeta-Jones", "Phil Ivey", "Phil Hellmuth",
+                     "Zhou Yong"}
 all_blacklist = bingo_blacklist.intersection(poker_blacklist,
                                              mahjong_blacklist)
 # print(all_blacklist)
