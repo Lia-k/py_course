@@ -4,8 +4,16 @@
 # врагов. И вывести сообщение f"{friend} we are not the friends anymore"
 # если друг оказался в списке врагов. Если имя друга James не проверяем его
 # ибо он лучшый друг.
-friends = ["John", "Marta", "James"]
-enemies = ["John", "Johnatan", "Artur"]
+friends = [
+    "John",
+    "Marta",
+    "James"
+]
+enemies = [
+    "John",
+    "Johnatan",
+    "Artur"
+]
 
 for friend in friends:
     if friend not in enemies:
