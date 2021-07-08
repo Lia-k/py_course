@@ -2,9 +2,10 @@
 # "name=Amanda=sssss&age=32&&salary=1500&currency=quro". Преобразовать эту
 # строку в словарь где ключем должно быть значение перед = а значение пары
 # значение после равно {name: Amanda......}
-parameter = "name=Amanda=sssss&age=32&&salary=1500&currency=quro"
+parameter = "     name=Amanda=sssss&age=32&&salary=1500&currency=quro                             "
+fixed_parameter = parameter.strip()
 pairs_dict = {}
-pairs = parameter.split("&")
+pairs = fixed_parameter.split("&")
 for pair in pairs:
     i = pair.split("=", maxsplit=1)
     if i[0] != '':
