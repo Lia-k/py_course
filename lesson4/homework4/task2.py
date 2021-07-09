@@ -13,3 +13,5 @@ friends_list = [
 print("Names".center(80, "*"))
 for friend in friends_list:
     print(f"{friend.rjust(80, ' ')}")
+
+# Good job

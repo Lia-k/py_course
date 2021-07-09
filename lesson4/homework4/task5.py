@@ -9,3 +9,5 @@ with codecs.open('text.txt', encoding='utf-8') as file:
     sentences = re.findall(r"[А-Я].*?[\.!?](?=\s|$)", text)
 
     print(sentences)
+
+# Best solution and looks almost like mine. Good job.
