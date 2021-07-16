@@ -16,3 +16,4 @@ def square(a: Union[int, float]) -> Union[tuple, str]:
     else:
         return "Please, pass correct data type "
 
+# Good. But I thinkg it will be better to name a like length.
