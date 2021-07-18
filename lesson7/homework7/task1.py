@@ -3,7 +3,7 @@ from typing import Callable, List, Tuple, Dict, Union, Any
 
 
 def my_filter(
-        callback: Callable,
+        callback: Callable[[Union[int, float, str]], bool],
         sequence: Union[List, Tuple, Dict]) -> List[Any]:
     """
         Returns a filtered list

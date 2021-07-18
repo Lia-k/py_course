@@ -1,9 +1,11 @@
 # Написать свою реализацию функции reduce
 from functools import reduce
-from typing import Callable, Union, List, Tuple, Dict
+from typing import Callable, Union, List, Tuple, Dict, Any
 
 
-def my_reduce(callback: Callable,
+def my_reduce(callback: Callable[[Union[int, float, str],
+                                  Union[int, float, str]],
+                                 Union[int, float, str]],
               sequence: Union[List, Tuple, Dict]) -> Union[List, Tuple, Dict,
                                                            str, int, float]:
     """

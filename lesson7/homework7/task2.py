@@ -2,7 +2,8 @@
 from typing import Any, Callable, List, Tuple, Dict, Union
 
 
-def my_map(callback: Callable,
+def my_map(callback: Callable[[Union[int, float, str]],
+                              Union[int, float, str]],
            sequence: Union[List, Tuple, Dict]) -> List[Any]:
     mapped_list = []
     for item in sequence:
