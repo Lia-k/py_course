@@ -1,8 +1,9 @@
 # Написать свою реализацию функции map
-from typing import Any, Callable, Iterable, List
+from typing import Any, Callable, List, Tuple, Dict, Union
 
 
-def my_map(callback: Callable, sequence: Iterable[Any]) -> List[Any]:
+def my_map(callback: Callable,
+           sequence: Union[List, Tuple, Dict]) -> List[Any]:
     mapped_list = []
     for item in sequence:
         mapped_item = callback(item)

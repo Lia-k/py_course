@@ -1,6 +1,6 @@
 # Написать свою реализацию функции reduce
 from functools import reduce
-from typing import Callable, Iterable, Any, Union, List, Tuple, Dict
+from typing import Callable, Union, List, Tuple, Dict
 
 
 def my_reduce(callback: Callable,
