@@ -1,0 +1,17 @@
+# Написать свою реализацию функции reduce
+from functools import reduce
+from typing import Callable, Iterable, Any, Union, List, Tuple, Dict
+
+
+def my_reduce(callback: Callable,
+              sequence: Union[List, Tuple, Dict]) -> Union[List, Tuple, Dict,
+                                                           str, int, float]:
+    """
+        Works like reduce
+    """
+    item_reduced = sequence[0]
+    for index, value in enumerate(sequence):
+        if index == len(sequence) - 1:
+            break
+        item_reduced = callback(item_reduced, sequence[index + 1])
+    return item_reduced
