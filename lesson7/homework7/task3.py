@@ -17,3 +17,8 @@ def my_reduce(callback: Callable[[Union[int, float, str],
             break
         item_reduced = callback(item_reduced, sequence[index + 1])
     return item_reduced
+
+print(my_reduce(lambda a, b: a + b, [1, 2, 3, 4, 5]))
+print(my_reduce(lambda a, b: a if a > b else b, [1, 2, 3, 4, 5]))
+print(my_reduce(lambda a, b: a if a < b else b, [1, 2, 3, 4, 5]))
+print(my_reduce(lambda a, b: a + b, ["One", "Two"]))
