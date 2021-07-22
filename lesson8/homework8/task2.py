@@ -12,3 +12,10 @@ def square_numbers():
                          if item % 2 == 0)
     for item in numbers_generator:
         return item
+
+print(square_numbers())  # reutnrs first item and will stop
+
+print(next(square_numbers())) # raise error
+# Well this code will not work since I am expecting to use iterator of
+# generator but I am getting only first item instead
+# - 5 poins

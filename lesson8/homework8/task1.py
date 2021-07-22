@@ -32,3 +32,10 @@ def find_difference(a: Union[int, float],
         Returns difference
     """
     return a - b
+
+if __name__ == '__main__':
+    result = find_sum(5, 5)
+    result += 2
+# Well done. Good decorator but it is brake logic of my code. Decorator change
+# expected result type
+# -3 points
