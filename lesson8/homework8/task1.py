@@ -10,9 +10,12 @@ def func_name(func):
     """
         Returns the name of the function with the function result
     """
+
     def inner(*args, **kwargs):
         header = func.__name__
-        return f"{header}\n{func(*args, **kwargs)}"
+        value = func(*args, **kwargs)
+        print(header)
+        return value
 
     return inner
 
@@ -32,6 +35,7 @@ def find_difference(a: Union[int, float],
         Returns difference
     """
     return a - b
+
 
 if __name__ == '__main__':
     result = find_sum(5, 5)
