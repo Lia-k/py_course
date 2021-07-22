@@ -7,15 +7,25 @@ def square_numbers():
         Returns the squares of even numbers in range(0, 1.000.000.000)
         inclusive
     """
-    numbers_generator = (item ** 2
-                         for item in range(1000000001)
-                         if item % 2 == 0)
-    for item in numbers_generator:
-        return item
+    num = 0
+    while num <= 1000000000:
+        if num % 2 == 0:
+            yield num ** 2
+        num += 1
 
-print(square_numbers())  # reutnrs first item and will stop
 
-print(next(square_numbers())) # raise error
+gen_func = square_numbers()
+
+for item in gen_func:
+    print(item)
+
+
+print(next(gen_func))
+print(next(gen_func))
+print(next(gen_func))
+print(next(gen_func))
+
+# raise error
 # Well this code will not work since I am expecting to use iterator of
 # generator but I am getting only first item instead
 # - 5 poins
