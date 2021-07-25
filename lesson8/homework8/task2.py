@@ -16,16 +16,11 @@ def square_numbers():
 
 gen_func = square_numbers()
 
-for item in gen_func:
-    print(item)
+# for item in gen_func:
+#     print(item)
 
 
 print(next(gen_func))
 print(next(gen_func))
 print(next(gen_func))
 print(next(gen_func))
-
-# raise error
-# Well this code will not work since I am expecting to use iterator of
-# generator but I am getting only first item instead
-# - 5 poins
