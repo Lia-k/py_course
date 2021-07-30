@@ -170,3 +170,6 @@ if __name__ == "__main__":
                            "Test position",
                            datetime(2020, 3, 9),
                            2340.55)
+
+# Nice I see logic in method age but also each setter could modificate attributes.
+# -2 points

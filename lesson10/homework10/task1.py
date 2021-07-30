@@ -103,3 +103,7 @@ if __name__ == "__main__":
                        ('Pavel Durov', "Nikolai Durov"),
                        "Pavel Durov",
                        "Software")
+
+# Good it is really nice and easy to read such class. But no logic inside class - 1point
+# and anyone from global scope could change name of company, industry, and other things
+# -2 points
