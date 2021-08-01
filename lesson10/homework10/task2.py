@@ -136,5 +136,3 @@ if __name__ == "__main__":
                            datetime(2020, 3, 9),
                            2340.55,
                            False)
-
-    print(my_employee.fire_employee())
