@@ -2,7 +2,7 @@
 # лоджик. Company.
 
 from datetime import date, datetime
-from typing import Tuple
+from typing import Tuple, Union, List
 
 
 class Company:
@@ -13,7 +13,8 @@ class Company:
             headquarters: str,
             founders: Tuple[str, ...],
             ceo: str,
-            industry: str
+            industry: str,
+            staff: List[str]
     ):
         """
             Initializes attributes that describe company
@@ -24,6 +25,7 @@ class Company:
         self.__founders = founders
         self.__ceo = ceo
         self.__industry = industry
+        self.__staff = staff
 
     @property
     def company_name(self) -> str:
@@ -31,13 +33,6 @@ class Company:
             Gets the company name value
         """
         return self.__company_name
-
-    @company_name.setter
-    def company_name(self, new_company_name: str):
-        """
-            Sets new company name
-        """
-        self.__company_name = new_company_name
 
     @property
     def founded(self) -> date:
@@ -53,13 +48,6 @@ class Company:
         """
         return self.__headquarters
 
-    @headquarters.setter
-    def headquarters(self, new_headquarters: str):
-        """
-            Sets new headquarters
-        """
-        self.__headquarters = new_headquarters
-
     @property
     def founders(self) -> Tuple[str, ...]:
         """
@@ -74,13 +62,6 @@ class Company:
         """
         return self.__ceo
 
-    @ceo.setter
-    def ceo(self, new_ceo: str):
-        """
-            Sets new ceo
-        """
-        self.__ceo = new_ceo
-
     @property
     def industry(self):
         """
@@ -88,12 +69,26 @@ class Company:
         """
         return self.__industry
 
-    @industry.setter
-    def industry(self, new_industry: str):
+    @property
+    def staff(self):
         """
-            Sets new industry
+            Gets the company industry
         """
-        self.__industry = new_industry
+        return self.__staff
+
+    def hire_new_staff(self, hired_employee: str) -> Union[int, str]:
+        if hired_employee in self.staff:
+            return "No such employee"
+        else:
+            self.staff.append(hired_employee)
+            return len(self.staff)
+
+    def fire_staff(self, fired_employee: str) -> Union[int, str]:
+        if fired_employee in self.staff:
+            self.staff.remove(fired_employee)
+            return len(self.staff)
+        else:
+            return "No such employee"
 
 
 if __name__ == "__main__":
@@ -102,4 +97,5 @@ if __name__ == "__main__":
                        "London, United Kingdom",
                        ('Pavel Durov', "Nikolai Durov"),
                        "Pavel Durov",
-                       "Software")
+                       "Software",
+                       ["Test1", "Test2", "Test3"])

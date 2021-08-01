@@ -13,7 +13,8 @@ class Employee:
             department: str,
             position: str,
             start_date: date,
-            salary: float
+            salary: float,
+            fired: bool
     ):
         """
             Initializes attributes that describe employee
@@ -27,6 +28,7 @@ class Employee:
         self.__position = position
         self.__start_date = start_date
         self.__salary = salary
+        self.__fired = fired
 
     @property
     def full_name(self) -> str:
@@ -35,26 +37,12 @@ class Employee:
         """
         return self.__full_name
 
-    @full_name.setter
-    def full_name(self, new_name: str):
-        """
-            Sets new employee's name
-        """
-        self.__full_name = new_name
-
     @property
     def address(self) -> str:
         """
             Gets the employee's address
         """
         return self.__address
-
-    @address.setter
-    def address(self, new_address: str):
-        """
-            Sets new employee's address
-        """
-        self.__address = new_address
 
     @property
     def phone_number(self) -> int:
@@ -63,26 +51,12 @@ class Employee:
         """
         return self.__phone_number
 
-    @phone_number.setter
-    def phone_number(self, new_phone_number: int):
-        """
-            Sets new employee's phone number
-        """
-        self.__phone_number = new_phone_number
-
     @property
     def ssn(self) -> int:
         """
             Gets the employee's social security number
         """
         return self.__ssn
-
-    @ssn.setter
-    def ssn(self, new_ssn: int):
-        """
-            Sets new employee's social security number
-        """
-        self.__ssn = new_ssn
 
     @property
     def birth_date(self) -> date:
@@ -110,26 +84,12 @@ class Employee:
         """
         return self.__department
 
-    @department.setter
-    def department(self, new_department: str):
-        """
-            Sets new employee's department
-        """
-        self.__department = new_department
-
     @property
     def position(self) -> str:
         """
             Gets the employee's position
         """
         return self.__position
-
-    @position.setter
-    def position(self, new_position: str):
-        """
-            Sets new employee's position
-        """
-        self.__position = new_position
 
     @property
     def start_date(self) -> date:
@@ -138,13 +98,6 @@ class Employee:
         """
         return self.__start_date
 
-    @start_date.setter
-    def start_date(self, new_start_date: date):
-        """
-            Sets new employee's start date
-        """
-        self.__start_date = new_start_date
-
     @property
     def salary(self) -> float:
         """
@@ -152,12 +105,24 @@ class Employee:
         """
         return self.__salary
 
-    @salary.setter
-    def salary(self, new_salary: float):
+    @property
+    def fired(self) -> bool:
         """
-            Sets new employee's salary
+            Gets the employee's salary
         """
-        self.__salary = new_salary
+        return self.__fired
+
+    def salary_with_raise(self, salary_raise):
+        if salary_raise > 0:
+            return self.salary + salary_raise
+        else:
+            "It is a fine, not salary raise"
+
+    def fire_employee(self):
+        if self.fired:
+            return "The employee does not work with us anymore."
+        else:
+            return "The employee is not fired yet, but we can change it."
 
 
 if __name__ == "__main__":
@@ -169,4 +134,7 @@ if __name__ == "__main__":
                            "Test department",
                            "Test position",
                            datetime(2020, 3, 9),
-                           2340.55)
+                           2340.55,
+                           False)
+
+    print(my_employee.fire_employee())
