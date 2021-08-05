@@ -45,3 +45,5 @@ if __name__ == "__main__":
     print(browser.use_browser('GoogleChrome').run())
     print(browser.use_browser('Firefox').run())
     print(browser.use_browser('Tor').run())
+# Good it is really good but I have to update this method use_browser each
+# time when will add new browser type. Try to think how it could be more in open close principle of SOLID.

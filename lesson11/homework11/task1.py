@@ -130,3 +130,4 @@ if __name__ == "__main__":
                   200.00,
                   "Turbojet engine",
                   74)
+    # Good but I don't see encapsulation of objects -2 points
