@@ -29,8 +29,8 @@ if __name__ == "__main__":
     John = Human("John", 23, "male", "video gaming")
     Amanda = Human("Amanda", 36, "female", "dancing")
     Jack = Human("Jack", 73, "male", "breathing")
-
+    # pycharm offers me a tip of removing instances' call. If I do so,
+    # it then offers me to add call
     John.action()
     Amanda.action()
     Jack.action()
-
