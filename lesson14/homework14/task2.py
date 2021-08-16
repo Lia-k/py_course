@@ -25,6 +25,7 @@ class CustomIterator:
         return self
 
     def __next__(self):
+        # in my opinion this is too long and complex condition so I suggest to split it on several smaller or simplify
         if self.__start_index < len(self.__sequence) > self.__end_index \
                 and self.__start_index != self.__end_index:
             item = self.__sequence[self.__start_index]
@@ -35,7 +36,7 @@ class CustomIterator:
 
 
 if __name__ == "__main__":
-    custom_iterator = CustomIterator([1, 2, 3, 4, 5, 6], 10, 10)
+    custom_iterator = CustomIterator([1, 2, 3, 4, 5, 6], 1, 2)
     iterator = iter(custom_iterator)
     for i in custom_iterator:
         print(i)

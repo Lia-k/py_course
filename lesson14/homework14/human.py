@@ -16,7 +16,7 @@ class Human:
         return self.__age
 
     @property
-    def action(self) -> object:
+    def action(self) -> Action:
         return self.__action
 
 
@@ -29,3 +29,4 @@ if __name__ == "__main__":
     John.action()
     Amanda.action()
     Jack.action()
+    # nice job. Take a look how to make annotation
