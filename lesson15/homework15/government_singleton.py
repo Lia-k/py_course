@@ -9,3 +9,6 @@ def singleton(_class: Type):
         return getattr(_class, f"{_class.__name__}__instance")
 
     return inner
+
+
+# almost right but instance not in private attributes -3 points
