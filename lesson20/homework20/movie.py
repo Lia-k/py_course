@@ -30,6 +30,14 @@ class Movie:
             movies_class.append(cls(*element))
         return movies_class
 
+    def __str__(self):
+        data = ""
+        for key, value in self.__dict__.items():
+            data += f"{key}: {value}\n"
+        return f"{{\n{data[:len(data) - 1]}\n}}"
+
 
 if __name__ == '__main__':
     movies = Movie.from_xml("market.xml")
+    for movie in movies:
+        print(movie)
